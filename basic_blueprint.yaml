@@ -1,0 +1,15 @@
+name: "Blueprint_Basic_Example"
+schema_version: "1.0.0"
+description: "Simple two module blueprint. Deploys Resource Group and sleep for 20 min"
+type: "blueprint"
+settings:
+  - name: TF_VERSION
+    value: 1.0
+modules:
+  - name: sleepy-resource
+    module_type: terraform
+    source:
+      source_type: github
+      git:
+        git_repo_url: "https://github.com/nishubharti/tf_cloudless_sleepy_13"
+        git_branch: main
